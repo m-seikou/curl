@@ -105,6 +105,7 @@ class Curl
             $post = http_build_query($post);
         }
         curl_setopt($this->ch, CURLOPT_POSTFIELDS, $post);
+        $this->exec();
     }
 
     public function getStatus()
