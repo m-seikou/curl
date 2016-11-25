@@ -98,10 +98,13 @@ class Curl
         $this->exec();
     }
 
-    public function post(array $post)
+    public function post($post)
     {
         curl_setopt($this->ch, CURLOPT_POST, true);
-        curl_setopt($this->ch, CURLOPT_POSTFIELDS, http_build_query($post));
+        if (is_array($post)) {
+            $post = http_build_query($post);
+        }
+        curl_setopt($this->ch, CURLOPT_POSTFIELDS, $post);
     }
 
     public function getStatus()
