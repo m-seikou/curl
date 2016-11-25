@@ -6,7 +6,7 @@
  * Time: 19:08
  */
 
-namespace mihoshi\Curl;
+namespace mihoshi\curl;
 
 
 class Curl

@@ -6,7 +6,7 @@
  * Time: 11:04
  */
 
-namespace mihoshi\Curl;
+namespace mihoshi\curl;
 
 require_once '../src/Curl.php';
 
