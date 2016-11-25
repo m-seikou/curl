@@ -159,5 +159,17 @@ class Curl
         return $this;
     }
 
+    public function setSslVerifyPeer(Boolean $val)
+    {
+        curl_setopt($this->ch, CURLOPT_SSL_VERIFYPEER, $val);
+        return $this;
+    }
+
+    public function setEncoding(String $val)
+    {
+        curl_setopt($this->ch, CURLOPT_ENCODING, $val);
+        return $this;
+    }
+
 
 }
